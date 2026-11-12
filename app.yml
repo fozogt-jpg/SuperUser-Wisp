@@ -1,0 +1,3 @@
+kind: wasmer.io/App.v0
+name: superuser-wisp
+package: wasmer/wisp-server
