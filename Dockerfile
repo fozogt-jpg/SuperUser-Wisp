@@ -11,5 +11,5 @@ RUN python -m pip install --no-cache-dir --upgrade pip && \
 
 EXPOSE 8000
 
-# Run the Wisp server properly targeting wisp.server on the specified port
-CMD ["python", "-m", "wisp.server", "--port", "8000"]
+# Bind to 0.0.0.0 so external health checks can reach port 8000
+CMD ["python", "-m", "wisp.server", "--host", "0.0.0.0", "--port", "8000"]
